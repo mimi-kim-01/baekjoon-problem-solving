@@ -3,18 +3,18 @@ import sys
 N, m, M, T, R = map(int, sys.stdin.readline().split())
 original = m
 do = 0
-rest = 0
+time = 0
 
 while do < N:
+    if original + T > M:
+        break
     if m + T <= M:
         m += T
         do += 1
     else: 
         m -= R
-        rest += 1
         if m < original:
             m = original
-    if do == N:
-        break
+    time += 1
 
-print(do + rest)
+print(time if do == N else -1)
