@@ -1,11 +1,8 @@
 import sys
 
-A, B = map(int, sys.stdin.readline().split())
+A, B = map(list, sys.stdin.readline().split())
 
-multiple = []
+A = list(map(int, A))
+B = list(map(int, B))
 
-for i in str(A):
-    for j in str(B):
-        multiple.append(int(i)*int(j))
-
-print(sum(multiple))
+print(sum(A)*sum(B))
