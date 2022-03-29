@@ -9,7 +9,7 @@ def pelindrome(num, len):
 
 while True:
     num = input()
-    if (num == '0'): break
+    if num == '0': break
     num_len = len(num)
     result = pelindrome(num, num_len)
     if result == 0: print("no")
